@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Depilação a Laser</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sombrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav> 
+        </div>
+        <div class="line"></div>
+    </header>
+	
+    <section>
+        <div id="topo">
+            <div id="subtitulo">
+                <h5>
+                O que é Depilação a Laser
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    A depilação a laser é um procedimento que utiliza a tecnologia do laser para destruir as células germinativas da raiz do pelo, tendo por consequência a sua eliminação. A eliminação dos pelos indesejáveis ocorre através da absorção da luz radiante do Laser pela melanina (pigmento) da raiz do pelo. Neste local, a energia luminosa é convertida em calor, o qual é difundido para as células germinativas do bulbo, levando a morte dessas células. Com isso, o pelo é eliminado e tende a não recorrer mais no mesmo local.
+                </h5>
+            </div>
+            <div id="subtitulo">
+                <h5>
+                Resultados e Benefícios
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Resultados desde a primeira sessão.<br>
+                    - Pele lisa e macia<br>
+                    - Ajuda a clarear a pele<br>
+                    - Pele livre de pelos encravados<br>
+                    - Sem foliculite
+                </h5>
+            </div>
+            <div id="subtitulo">
+                <h5>
+                    Áreas indicadas para tratamento
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Axila<br>
+                    - Virilha<br>
+                    - Perna<br>
+                    - Pé<br>
+                    - Peito<br>
+                    - Ombro<br>
+                    - Rosto<br>
+                    - Barba<br>
+                    - Qualquer lugar que houver pelos
+                </h5>
+            </div>
+            <div id="subtitulo">
+                <h5>
+                Contraindicações
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                   - Gravidez<br>
+                   - Isotretinoína (2 meses)<br>
+                   - Depilação com cera ou pinça nas últimas 4 semanas<br>
+                   - Herpes Simplex e Herpes Zoster<br>
+                   - Paciente Bronzeado e sobre tatuagem<br>
+                   - Dermatoses (Vitiligo,Psoríase,Lúpus..)<br>
+                   - Transtornos de cicatrização (Quelóides)<br>
+                   - Síndrome do Ovário Policístico<br><br>
+                </h5>
+            </div>
+            <div class="banners">
+                <a href="indexagendar.html">
+                    <img src="imgs/depilacao a laser.png" alt="Banner 1" class="banner-image"><br><br><br><br><br>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleOptions(optionId, button) {
+            const options = document.getElementById(optionId);
+            const isVisible = options.style.display === 'block';
+            // Hide all options
+            document.querySelectorAll('.options').forEach(option => option.style.display = 'none');
+            // Display the clicked options
+            options.style.display = isVisible ? 'none' : 'block';
+            // Adjust the position of the options
+            const buttonRect = button.getBoundingClientRect();
+            options.style.top = `${buttonRect.height}px`; // Position below the button
+            options.style.left = `0`; // Align with the left edge of the button
+        }
+    </script>
+</body>  
+</html>

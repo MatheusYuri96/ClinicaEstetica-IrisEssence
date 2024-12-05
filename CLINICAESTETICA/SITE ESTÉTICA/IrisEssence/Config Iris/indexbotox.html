@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Botox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo" class="logo">
+            </div>
+            <!-- Menu de navegação -->
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sobrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav> 
+        </div>
+        <div class="line"></div>
+    </header>
+    
+    <!-- Seção principal -->
+    <section>
+        <div id="topo">
+            <!-- Subtítulo e texto explicativo sobre o Botox -->
+            <div id="subtitulo">
+                <h5>O que é Botox</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    O botox é a forma purificada da toxina botulínica tipo A, uma substância produzida pela bactéria Clostridium botulinum.
+                </h5>
+            </div>
+
+            <!-- Como o Botox funciona -->
+            <div id="subtitulo">
+                <h5>Como funciona?</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    O Botox funciona bloqueando temporariamente os sinais nervosos nos músculos onde é injetado. Quando a toxina botulínica é aplicada em áreas específicas da face, ela impede a liberação de acetilcolina, uma substância química que transmite os sinais nervosos para os músculos. Isso faz com que os músculos relaxem e não se contraiam tanto. 
+                </h5>
+            </div>
+
+            <!-- Resultados visíveis do Botox -->
+            <div id="subtitulo">
+                <h5>Resultados Visíveis</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    Ao relaxar os músculos responsáveis pelas expressões faciais, o Botox suaviza as rugas dinâmicas — aquelas que são causadas pela movimentação repetitiva dos músculos faciais, como linhas de expressão na testa, ao redor dos olhos (pés de galinha) e entre as sobrancelhas (linhas glabelares).
+                </h5>
+            </div>
+
+            <!-- Áreas indicadas para o tratamento de Botox -->
+            <div id="subtitulo">
+                <h5>Áreas indicadas para tratamento</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Linhas da testa<br>
+                    - Pés de galinha<br>
+                    - Linhas glabelares<br>
+                    - Rugas no pescoço e ao redor da boca
+                </h5>
+            </div>
+
+            <!-- Contraindicações para o Botox -->
+            <div id="subtitulo">
+                <h5>Contraindicações</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Mulheres grávidas ou amamentando;<br>
+                    - Pessoas com doenças neuromusculares, ou com histórico de reações alérgicas à toxina botulínica.<br><br>
+                </h5>
+            </div>
+
+            <!-- Banner de agendamento -->
+            <div class="banners">
+                <a href="indexagendar.html">
+                    <img src="imgs/botox.png" alt="Banner 1" class="banner-image"><br><br><br><br><br>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para exibir as opções do menu -->
+    <script>
+        function toggleOptions(optionId, button) {
+            const options = document.getElementById(optionId);
+            const isVisible = options.style.display === 'block';
+            
+            // Esconde todas as opções
+            document.querySelectorAll('.options').forEach(option => option.style.display = 'none');
+            
+            // Exibe as opções clicadas
+            options.style.display = isVisible ? 'none' : 'block';
+
+            // Ajusta a posição das opções
+            const buttonRect = button.getBoundingClientRect();
+            options.style.top = `${buttonRect.height}px`; // Posiciona abaixo do botão
+            options.style.left = `0`; // Alinha com a borda esquerda do botão
+        }
+    </script>
+</body>  
+</html>

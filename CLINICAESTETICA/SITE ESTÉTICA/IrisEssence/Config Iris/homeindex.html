@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Clínica Estética</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo Íris Essence" class="logo">
+            </div>
+            <!-- Menu de navegação -->
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <!-- Links para os procedimentos faciais -->
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sombrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <!-- Links para os procedimentos corporais -->
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav> 
+        </div>
+        <div class="line"></div>
+    </header>
+
+    <!-- Seção principal da página -->
+    <section>
+        <div id="topo">
+            <!-- Título da página -->
+            <div id="titulo">
+                <h2><br>Seu bem-estar é nossa prioridade, sua beleza, nossa missão.<br></h2>
+            </div>
+
+            <!-- Banners de serviços -->
+            <div class="banners">
+                <a href="indexbotox.html">
+                    <img src="imgs/botox.png" alt="Banner Botox" class="banner-image">
+                </a>
+                <a href="indexlimpele.html">
+                    <img src="imgs/limpeza de pele.png" alt="Banner Limpeza de Pele" class="banner-image">
+                </a>
+                <a href="indexdesgsomb.html">
+                    <img src="imgs/design de sobrancelhas.png" alt="Banner Design de Sobrancelhas" class="banner-image">
+                </a>
+                <a href="indextratacne.html">
+                    <img src="imgs/tratamento para acne.png" alt="Banner Tratamento para Acne" class="banner-image">
+                </a>
+                <a href="indexdepcera.html">
+                    <img src="imgs/depilacao com cera.png" alt="Banner Depilação a Cera" class="banner-image">
+                </a>
+                <a href="indexmasmod.html">
+                    <img src="imgs/massagem modeladora.png" alt="Banner Massagem Modeladora" class="banner-image">
+                </a>
+                <a href="indexmasrelax.html">
+                    <img src="imgs/massagem relaxante.png" alt="Banner Massagem Relaxante" class="banner-image">
+                </a>
+                <a href="indexrecapilar.html">
+                    <img src="imgs/reconstrucao capilar.png" alt="Banner Reconstrução Capilar" class="banner-image">
+                </a>
+                <a href="indexdeplaser.html">
+                    <img src="imgs/depilacao a laser.png" alt="Banner Depilação a Laser" class="banner-image">
+                </a>
+                <a href="indexdrenlinf.html">
+                    <img src="imgs/drenagem linfatica.png" alt="Banner Drenagem Linfática" class="banner-image">
+                </a>
+            </div>
+            <br><br><br>
+
+            <!-- Subtítulo e texto sobre a história da marca -->
+            <div id="subtitulo">
+                <h5>História da Marca</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    A Iris Essence foi fundada a partir de um sonho em comum: criar algo que fosse mais do que <br>um simples produto de beleza. Cada um de nós quatro trazia uma visão única, mas todos <br>compartilhavam a ideia de que a verdadeira essência da vida está na conexão entre corpo, <br>mente e espírito. 
+                    Juntos, nós fundamos a Iris Essence, uma marca com o propósito de <br>proporcionar uma verdadeira transformação através de cuidados naturais e profundos.<br>
+                    O nome "Iris" foi inspirado pela flor que simboliza sabedoria e transformação, e "Essence" <br>representa a busca pela verdadeira essência dentro de cada pessoa.<br><br><br>
+                </h5>
+            </div>
+
+            <!-- Subtítulo e texto sobre a missão da marca -->
+            <div id="subtitulo">
+                <h5>Missão da Marca</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    A missão da Iris Essence é oferecer produtos que vão além da pele, ajudando as pessoas <br>a se reconectarem com sua essência interior e a encontrarem equilíbrio e bem-estar. Usando <br>fórmulas naturais e sustentáveis, a marca promove a beleza genuína, baseada na harmonia <br>entre corpo, mente e espírito.<br><br><br><br>
+                </h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para exibir e ocultar opções no menu -->
+    <script>
+        function toggleOptions(optionId, button) {
+            const options = document.getElementById(optionId);
+            const isVisible = options.style.display === 'block';
+            
+            // Oculta todas as opções antes de exibir a escolhida
+            document.querySelectorAll('.options').forEach(option => option.style.display = 'none');
+            
+            // Exibe ou oculta a opção clicada
+            options.style.display = isVisible ? 'none' : 'block';
+
+            // Ajusta a posição da opção
+            const buttonRect = button.getBoundingClientRect();
+            options.style.top = `${buttonRect.height}px`; // Posiciona abaixo do botão
+            options.style.left = `0`; // Alinha à esquerda do botão
+        }
+    </script>
+</body>  
+</html>

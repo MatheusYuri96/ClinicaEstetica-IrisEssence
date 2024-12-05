@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Massagem Relaxante</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo" class="logo">
+            </div>
+            <!-- Menu de navegação -->
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sombrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav> 
+        </div>
+        <div class="line"></div>
+    </header>
+
+    <!-- Seção principal -->
+    <section>
+        <div id="topo">
+            <!-- Subtítulo e explicação sobre Massagem Relaxante -->
+            <div id="subtitulo">
+                <h5>O que é Massagem Relaxante</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    A massagem relaxante é uma técnica terapêutica suave que utiliza movimentos lentos, circulares e suaves para promover o relaxamento muscular, aliviar o estresse e proporcionar uma sensação de bem-estar. Ela visa acalmar a mente e o corpo, aliviando tensões acumuladas e melhorando a circulação.
+                </h5>
+            </div>
+
+            <!-- Resultados e benefícios da Massagem Relaxante -->
+            <div id="subtitulo">
+                <h5>Resultados e Benefícios</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Redução do estresse e da ansiedade.<br>
+                    - Alívio da tensão muscular e dor localizada.<br>
+                    - Melhora na circulação sanguínea e linfática.<br>
+                    - Aumento do nível de relaxamento e qualidade do sono.<br>
+                    - Estímulo ao bem-estar geral e sensação de tranquilidade.<br>
+                    - Melhora da flexibilidade muscular e alívio de contraturas.
+                </h5>
+            </div>
+
+            <!-- Contraindicações da Massagem Relaxante -->
+            <div id="subtitulo">
+                <h5>Contraindicações</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Lesões agudas ou inflamações graves na pele ou músculos.<br>
+                    - Doenças cardíacas graves, como insuficiência cardíaca ou arritmias.<br>
+                    - Trombose ou distúrbios circulatórios sérios.<br>
+                    - Gravidez de alto risco ou complicações gestacionais (sem liberação médica).<br>
+                    - Febre ou infecções agudas.<br>
+                    - Doenças de pele contagiosas (ex: dermatites, infecções fúngicas).<br><br>
+                </h5>
+            </div>
+
+            <!-- Banner para agendamento -->
+            <div class="banners">
+                <a href="indexagendar.html">
+                    <img src="imgs/massagem relaxante.png" alt="Banner Massagem Relaxante" class="banner-image"><br><br><br><br><br>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para exibir as opções do menu -->
+    <script>
+        function toggleOptions(optionId, button) {
+            const options = document.getElementById(optionId);
+            const isVisible = options.style.display === 'block';
+            
+            // Esconde todas as opções
+            document.querySelectorAll('.options').forEach(option => option.style.display = 'none');
+            
+            // Exibe as opções clicadas
+            options.style.display = isVisible ? 'none' : 'block';
+
+            // Ajusta a posição das opções
+            const buttonRect = button.getBoundingClientRect();
+            options.style.top = `${buttonRect.height}px`; // Posiciona abaixo do botão
+            options.style.left = `0`; // Alinha com a borda esquerda do botão
+        }
+    </script>
+</body>  
+</html>

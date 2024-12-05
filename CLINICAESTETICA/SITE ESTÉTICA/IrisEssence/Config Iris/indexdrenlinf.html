@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Drenagem Linfática</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sombrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav> 
+        </div>
+        <div class="line"></div>
+    </header>
+	
+    <section>
+        <div id="topo">
+            <div id="subtitulo">
+                <h5>
+                O que é Drenagem Linfática
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    A drenagem linfática é uma técnica de massagem suave e ritmada que estimula o sistema linfático a trabalhar de forma mais eficiente. Esse sistema é responsável por transportar líquidos, resíduos metabólicos e toxinas pelo corpo, promovendo sua eliminação.
+                </h5>
+            </div>
+            <div id="subtitulo">
+                <h5>
+                Resultados e Benefícios
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Redução do inchaço e retenção de líquidos.<br>
+
+                    - Estímulo à circulação linfática e sanguínea.<br>
+                    
+                    - Auxílio no combate à celulite e sensação de peso nas pernas.<br>
+                    
+                    - Melhora da oxigenação dos tecidos.<br>
+                    
+                    - Aceleração da recuperação pós-cirúrgica (com orientação médica).<br>
+                    
+                    - Relaxamento e bem-estar geral.<br>
+                </h5>
+            </div>
+            <div id="subtitulo">
+                <h5>
+                Contraindicações
+                </h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Infecções agudas (como febre, gripe ou infecções na pele).<br>
+
+                    - Doenças cardíacas graves, como insuficiência cardíaca.<br>
+                    
+                    - Trombose venosa profunda ou risco de embolia.<br>
+                    
+                    - Câncer ativo (exceto com autorização médica).<br>
+                    
+                    - Gestação de risco ou no primeiro trimestre sem liberação médica.<br>
+                    
+                    - Insuficiência renal não controlada.<br><br>
+                </h5>
+            </div>
+            <div class="banners">
+                <a href="indexagendar.html">
+                    <img src="imgs/drenagem linfatica.png" alt="Banner 1" class="banner-image"><br><br><br><br><br>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleOptions(optionId, button) {
+            const options = document.getElementById(optionId);
+            const isVisible = options.style.display === 'block';
+            // Hide all options
+            document.querySelectorAll('.options').forEach(option => option.style.display = 'none');
+            // Display the clicked options
+            options.style.display = isVisible ? 'none' : 'block';
+            // Adjust the position of the options
+            const buttonRect = button.getBoundingClientRect();
+            options.style.top = `${buttonRect.height}px`; // Position below the button
+            options.style.left = `0`; // Align with the left edge of the button
+        }
+    </script>
+</body>  
+</html>

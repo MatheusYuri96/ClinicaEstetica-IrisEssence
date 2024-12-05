@@ -1,0 +1,192 @@
+body {
+	cursor: url(), auto;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapers.com/images/hd/black-dragon-mjve19tbgfuz6ahk.jpg');
+    background-size: cover; /* Garantir que a imagem cubra o fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    color: white;
+	font-family:"Century Gothic", sans-serif;
+}
+
+#titulo {
+    font-family: Trebuchet MS;
+    margin-left: 300px; /* Move o texto para a direita */
+    margin-top: 5px; /* Corrige o valor de margem */
+    padding: 5px; /* Adiciona espaço interno ao redor do texto */
+}
+
+#texto {
+	font-style: normal;
+    color: white;
+	font-family:"Century Gothic", sans-serif;
+    margin-left: 150px; /* Move o texto para a direita */
+    margin-top: 70px; /* Move o texto para baixo */
+    padding: 5px; /* Adiciona espaço interno ao redor do texto */
+}
+
+footer {
+    font-family: Trebuchet MS;
+    color: gray;
+    text-align: center; /* Centraliza o texto no footer */
+    padding: 0px 0px; /* Adiciona espaço ao redor do texto */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    background-size: cover; /* Faz o fundo cobrir o footer */
+    background-position: center; /* Centraliza o fundo do footer */
+    margin: 0;
+    height: 40px; /* Ajusta a altura do footer */
+}
+
+.header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Layout vertical para o cabeçalho */
+    position: relative; /* Permite o posicionamento absoluto dentro do header */
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Alinha a logo e os botões verticalmente no centro */
+    padding: 10px;
+    z-index: 2; /* Garante que o conteúdo do cabeçalho fique acima da linha verde */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinha a logo verticalmente no centro */
+}
+
+.logo {
+    height: auto; /* Mantém a proporção da altura */
+    width: 150px; /* Largura da logo */
+}
+
+.baixo {
+    padding: 30px 120px;
+    width: 450px; /* Largura do banner */
+    height: 140px; /* Altura ajustada automaticamente */
+}
+
+.nav-menu {
+    font-family: Trebuchet MS;
+    display: flex;
+    align-items: center; /* Alinha os botões verticalmente no centro */
+    margin-left: 20px; /* Espaço entre a logo e os botões */
+}
+
+.nav-atividades {
+	color:white;
+	padding: 190px 430px;
+    font-family: Trebuchet MS;
+    display: flex;
+    align-items: center; /* Alinha os botões verticalmente no centro */
+    margin-left: 20px; /* Espaço entre a logo e os botões */	
+}
+
+.menu-atividades {
+	color:white;
+    font-family: Trebuchet MS;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Espaço entre os itens do menu */
+}	
+	
+.menu-item {
+    font-family: Trebuchet MS;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Espaço entre os itens do menu */
+}
+
+.menu-button {
+    padding: 10px;
+    background-color: black;
+    color: white; /* Cor do texto no botão */
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px; /* Ajuste conforme necessário */
+    border-radius: 20px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s; /* Animações suaves */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.menu-button:hover {
+    background-color: #191a19; /* Leve variação para efeito hover */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.options {
+    display: none;
+    position: absolute;
+    background-color: black; /* Cor de fundo das opções */
+    border: 1px solid #ddd; /* Borda cinza clara para contraste */
+    width: 150px; /* Ajuste conforme necessário */
+    border-radius: 12px; /* Bordas arredondadas */
+    z-index: 1;
+    top: 100%; /* Coloca diretamente abaixo do botão */
+    left: 0;
+    transition: opacity 0.3s, visibility 0.3s; /* Animações suaves */
+}
+
+.menu-item:hover .options {
+    display: block; /* Mostra opções ao passar o mouse sobre o item do menu */
+}
+
+.options a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white; /* Cor do texto das opções */
+    border-bottom: 1px solid #333; /* Borda inferior escura para separar as opções */
+    border-radius: 8px; /* Bordas arredondadas dos itens */
+    transition: background-color 0.3s, transform 0.3s; /* Animações suaves */
+    margin-bottom: 5px; /* Espaço entre os itens */
+}
+
+.options a:hover {
+    background-color: #191a19; /* Fundo escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.options a:focus {
+    outline: 2px solid black; /* Borda preta ao focar no item */
+    outline-offset: -2px; /* Ajusta a posição da borda para não desalinhar o layout */
+}
+
+.line {
+    height: 5px;
+    background-color: #46ff03; /* Verde brilhante para destaque */
+    width: 100%;
+    z-index: 1; /* Garante que a linha verde fique abaixo do cabeçalho */
+}
+
+.banner {
+    padding: 10px 50px;
+    position: absolute;
+    right: 0;
+    top: 270px; /* Espaço adicional entre a linha verde e o banner */
+    max-width: 500px; /* Define a largura máxima do banner */
+    max-height: 700%; /* Garante que a altura do banner se ajuste ao contêiner */
+    width: auto; /* Largura ajustada automaticamente */
+    height: auto; /* Altura ajustada automaticamente */
+    border: 0px solid #ddd; /* Borda clara para destaque */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do banner */
+    display: flex; /* Centraliza a imagem dentro do banner */
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Garante que o banner fique abaixo do cabeçalho e da linha verde */
+}
+
+.banner img {
+    max-width: 80%; /* Faz a imagem ajustar a largura do banner */
+    max-height: 100%; /* Faz a imagem ajustar a altura do banner */
+    object-fit: contain; /* Ajusta a imagem para caber no banner sem cortar */
+}

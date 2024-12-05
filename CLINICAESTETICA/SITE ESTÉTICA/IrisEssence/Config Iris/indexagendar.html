@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Agendamento</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo" class="logo">
+            </div>
+            <!-- Menu de navegação -->
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sobrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Seção de conteúdo principal -->
+    <section>
+        <div id="topo">
+            <!-- Título principal -->
+            <div id="titulo">
+                <h2><br>Agende sua consulta conosco e experimente o melhor da estética.<br></h2>
+            </div>
+
+            <!-- Subtítulo e texto explicativo -->
+            <div id="subtitulo">
+                <h5>Agendamento de Procedimentos</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    Escolha o serviço desejado e selecione a data que melhor se encaixa na sua agenda. <br> 
+                    Em breve, entraremos em contato para confirmar o seu agendamento.
+                </h5>
+            </div>
+
+            <!-- Formulário de Agendamento -->
+            <form action="#" method="post" class="formulario-agendamento">
+                <!-- Campo para escolha do procedimento -->
+                <div class="input-group">
+                    <label for="procedimento">Escolha o Procedimento:</label>
+                    <select id="procedimento" name="procedimento" required>
+                        <option value="limpeza_pele">Procedimento:</option>
+                        <option value="botox">Botox | R$500.00</option>
+                        <option value="limpeza_pele">Limpeza de Pele | R$150,00</option>
+                        <option value="design_sobrancelha">Design de Sobrancelha | R$50,00</option>
+                        <option value="tratamento_acne">Tratamento para Acne | R$200,00</option>
+                        <option value="depilacao_cera">Depilação a Cera | R$100,00</option>
+                        <option value="massagem_modeladora">Massagem Modeladora | R$120,00</option>
+                        <option value="massagem_relaxante">Massagem Relaxante | R$80,00</option>
+                        <option value="reconstrucao_capilar">Reconstrução Capilar | R$100,00</option>
+                        <option value="depilacao_laser">Depilação a Laser | R$250,00</option>
+                        <option value="drenagem_linfatica">Drenagem Linfática | R$200,00</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="metodo_pagamento">Escolha o Método de Pagamento:</label>
+                    <select id="metodo_pagamento" name="metodo_pagamento" required>
+                        <option value="cartao_credito">Método de Pagamento:</option>
+                        <option value="cartao_credito">Cartão de Crédito</option>
+                        <option value="cartao_debito">Cartão de Débito</option>
+                        <option value="boleto_bancario">Boleto Bancário</option>
+                        <option value="pix">Pix</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+                
+                <!-- Campo para escolha da data -->
+                <div class="input-group">
+                    <label for="data">Escolha a Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <!-- Campo para escolha da hora -->
+                <div class="input-group">
+                    <label for="hora">Escolha a Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+
+                <!-- Campo para inserir o nome -->
+                <div class="input-group">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <!-- Campo para inserir o telefone -->
+                <div class="input-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                </div>
+
+                <!-- Botões de agendamento -->
+                <div class="botoes-agendamento">
+                    <button type="submit">Agendar</button>
+                    <button type="reset">Limpar</button>
+                    <br><br><br><br>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts para funcionalidades do formulário -->
+    <script>
+        // Função para aplicar a máscara no campo de telefone
+        function mascaraTelefone(event) {
+            let telefone = event.target.value;
+            telefone = telefone.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+
+            // Limita o número de caracteres a 11 (formato de telefone brasileiro)
+            if (telefone.length > 11) {
+                telefone = telefone.substring(0, 11);
+            }
+
+            telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2'); // Adiciona o parêntese
+            telefone = telefone.replace(/(\d{5})(\d{4})/, '$1-$2'); // Adiciona o hífen
+
+            event.target.value = telefone;
+        }
+
+        // Aplica a máscara ao campo de telefone
+        document.getElementById('telefone').addEventListener('input', mascaraTelefone);
+
+        // Função para validar o telefone
+        function validarTelefone(telefone) {
+            const regex = /^\(\d{2}\)\s?\d{5}-\d{4}$/; // Valida o formato (XX) XXXXX-XXXX
+            return regex.test(telefone);
+        }
+
+        // Evento para validar o telefone ao submeter o formulário
+        document.querySelector('.formulario-agendamento').addEventListener('submit', function(event) {
+            const telefone = document.getElementById('telefone').value;
+
+            if (!validarTelefone(telefone)) {
+                alert('Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.');
+                event.preventDefault(); // Previne o envio do formulário
+            }
+        });
+    </script>
+</body>
+</html>

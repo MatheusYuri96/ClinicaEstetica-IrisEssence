@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀 Íris Essence - Tratamento de Acne</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="imgs/logoiris.png" alt="Logo" class="logo">
+            </div>
+            <!-- Menu de navegação -->
+            <nav class="nav-menu">
+                <div class="menu-item">
+                    <a href="homeindex.html" class="menu-button">Home</a>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option2', this)">Procedimentos Faciais</button>
+                    <div id="option2" class="options">
+                        <a href="indexbotox.html">Botox</a>
+                        <a href="indexlimpele.html">Limpeza de Pele</a>
+                        <a href="indexdesgsomb.html">Design de Sombrancelha</a>
+                        <a href="indextratacne.html">Tratamento para Acne</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <button class="menu-button" onclick="toggleOptions('option3', this)">Procedimentos Corporais</button>
+                    <div id="option3" class="options">
+                        <a href="indexmasmod.html">Massagem Modeladora</a>
+                        <a href="indexmasrelax.html">Massagem Relaxante</a>
+                        <a href="indexrecapilar.html">Reconstrução Capilar</a>
+                        <a href="indexdeplaser.html">Depilação a Laser</a>
+                        <a href="indexdepcera.html">Depilação a Cera</a>
+                        <a href="indexdrenlinf.html">Drenagem Linfática</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a href="indexagendar.html" class="menu-button">Agendar</a>
+                </div>
+            </nav> 
+        </div>
+        <div class="line"></div>
+    </header>
+
+    <!-- Seção principal -->
+    <section>
+        <div id="topo">
+            <!-- Subtítulo e explicação sobre o Tratamento para Acne -->
+            <div id="subtitulo">
+                <h5>O que é Tratamento para Acne</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    O tratamento para acne envolve uma série de procedimentos e produtos destinados a controlar a produção de oleosidade, desobstruir os poros, reduzir a inflamação e prevenir o surgimento de novas lesões. Ele pode incluir cuidados tópicos, orais, estéticos ou até tratamentos clínicos dependendo do grau da acne.
+                </h5>
+            </div>
+
+            <!-- Resultados e benefícios do Tratamento para Acne -->
+            <div id="subtitulo">
+                <h5>Resultados e Benefícios</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Redução das lesões de acne (cravos, espinhas e cistos).<br>
+                    - Controle da oleosidade excessiva da pele.<br>
+                    - Melhora da textura e uniformidade da pele.<br>
+                    - Prevenção de cicatrizes e manchas.<br>
+                    - Aumento da autoestima e confiança com uma pele mais saudável.<br>
+                    - Redução de inflamações e desconfortos associados à acne.
+                </h5>
+            </div>
+
+            <!-- Contraindicações do Tratamento para Acne -->
+            <div id="subtitulo">
+                <h5>Contraindicações</h5>
+            </div>
+            <div id="texto">
+                <h5>
+                    - Uso de medicamentos ou tratamentos que possam reagir com o procedimento (ex: isotretinoína, sem orientação médica).<br>
+                    - Pele extremamente sensível ou com condições agravadas, como rosácea severa.<br>
+                    - Alergia aos produtos ou ativos utilizados no tratamento.<br>
+                    - Gravidez ou lactação (dependendo dos métodos ou substâncias, como ácido salicílico ou retinóides).<br>
+                    - Lesões abertas ou infecções na pele que possam piorar com o tratamento.<br><br>
+                </h5>
+            </div>
+
+            <!-- Banner para agendamento -->
+            <div class="banners">
+                <a href="indexagendar.html">
+                    <img src="imgs/tratamento para acne.png" alt="Banner Tratamento para Acne" class="banner-image"><br><br><br><br><br>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Iris Essence. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para exibir as opções do menu -->
+    <script>
+        function toggleOptions(optionId, button) {
+            const options = document.getElementById(optionId);
+            const isVisible = options.style.display === 'block';
+            
+            // Esconde todas as opções
+            document.querySelectorAll('.options').forEach(option => option.style.display = 'none');
+            
+            // Exibe as opções clicadas
+            options.style.display = isVisible ? 'none' : 'block';
+
+            // Ajusta a posição das opções
+            const buttonRect = button.getBoundingClientRect();
+            options.style.top = `${buttonRect.height}px`; // Posiciona abaixo do botão
+            options.style.left = `0`; // Alinha com a borda esquerda do botão
+        }
+    </script>
+</body>  
+</html>
